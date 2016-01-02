@@ -1,0 +1,36 @@
+.textCenter {
+	text-align: center;
+}
+
+.requireLogin {
+	width: 500px;
+	margin: auto;
+	margin-top: 200px;
+}
+
+.indexInfoBox {
+	width: 1000px;
+	margin-top: 200px;
+	margin:	auto; 
+}
+
+.modalBody {
+	height: 160px !important;
+}
+
+.addInfo {
+	margin: auto;
+	height: 80px;
+	width: 100px;
+}
+
+.chargeMain {
+	width: 500px;
+	margin: auto;
+    margin-top: 200px;
+}
+
+.userCreditBox{
+	width: 500px;
+	margin: auto;
+}
