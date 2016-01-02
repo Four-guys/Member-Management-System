@@ -62,8 +62,7 @@ if($username == null){
                 echo '<tr data-toggle="modal" data-target="#myModal">';
 
                 echo '<td calss="ID">'.$row['Id'].'</td>';
-                echo '<td class="name>'.$row['Username'].'</td>';
-                echo '<td class="name>'.$row['Username'].'</td>';
+                echo '<td class="name">'.$row['Username'].'</td>';
                 echo '<td class="sex">'.$row['Sex'].'</td>';
                 echo '<td class="tel">'.$row['Phonenumber'].'</td>';
                 echo '<td class="level">'.$row['Userlevel'].'</td>';
