@@ -152,10 +152,10 @@ if($username == null){
             }
 
             $('#myModal').find('.ID').text("ID : " + ID);
-            $('#myModal').find('.name').attr('placeholder', name);
-            $('#myModal').find('.sex').attr('placeholder', sex);
-            $('#myModal').find('.tel').attr('placeholder', tel);
-            $('#myModal').find('.level').attr('placeholder',level);
+            $('#myModal').find('.name').attr('value', name);
+            $('#myModal').find('.sex').attr('value', sex);
+            $('#myModal').find('.tel').attr('value', tel);
+            $('#myModal').find('.level').attr('value',level);
 
             $('.btn-delete').click(function(){
                 $('#myModal').find('.select').attr('action','delete.php');
