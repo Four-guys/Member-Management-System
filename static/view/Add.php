@@ -6,25 +6,28 @@
 </head>
 <body>
   <?php
-
+  error_reporting(0);
+  require_once 'commonfunc.php';
+  $url = 'index.php';
   $Username = $_POST['Username'];
   $Sex = $_POST['Sex'];
   $Phonenumber = $_POST['Phonenumber'];
   $Userlevel = $_POST['Userlevel'];
-
-  $dbc = mysqli_connect('localhost','Eric','19950704w09','mms_t')
+  $dbc = mysqli_connect('localhost','root','6581526','mms_t')
     or die('数据插入失败，请重新插入');
 
 
   $query = "INSERT INTO userinfo ( Username,Sex,Phonenumber,Userlevel ) Values ('$Username','$Sex','$Phonenumber','Userlevel')";
     
 
-  $result = mysqli_query($dbc,$query) or die('数据插入失败，请重新插入');
-
+  $res = mysqli_query($dbc,$query) or die('数据插入失败，请重新插入');
+  if($res){
+      $mes = '添加成功';
+  }else{
+      $mes = '添加失败';
+  }
+  alertMes($mes,$url);
   mysqli_close($dbc);
-
-  echo '数据成功插入';
-  
 ?>
 </body>
 </html>

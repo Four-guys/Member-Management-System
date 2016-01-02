@@ -6,16 +6,25 @@
 </head>
 <body>
 	<?php
-  $Username = $_POST['Username'] ;
+    error_reporting(0);
+    require_once 'commonfunc.php';
+    $url = 'index.php';
+     $Username = $_POST['Username'] ;
 
-  $dbc = mysqli_connect('localhost','Eric','19950704w09','mms_t')
-    or die('数据查询失败');
+    $dbc = mysqli_connect('localhost','root','6581526','mms_t')
+        or die('数据查询失败');
 
-  $query = "DELETE from userInfo where Username = '$Username'";
+     $query = "DELETE from userInfo where Username = '$Username'";
 
-  $result = mysqli_query($dbc,$query) or die('不存在该出版社');
+     $res = mysqli_query($dbc,$query);
 
-  echo '<h2>数据删除成功</h2>';
+    if($res){
+        $mes = '删除成功';
+    }else{
+        $mes = '删除失败';
+    }
+    alertMes($mes,$url);
+    mysqli_close($dbc);
 ?>
 
 </body>

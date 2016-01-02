@@ -6,26 +6,30 @@
   <title>用户修改</title>
 </head>
 <body>
-  <h2>成功修改！！</h2>
-
 <?php
+error_reporting(0);
+require_once 'commonfunc.php';
+$url = 'index.php';
   $Username = $_POST['Username'];
   $Sex = $_POST['Sex'];
   $Phonenumber = $_POST['Phonenumber'];
   $Userlevel = $_POST['Userlevel'];
 
-  $dbc = mysqli_connect('localhost','Eric','19950704w09','mms_t')
-    or die('数据插入失败，请重新插入1');
+  $dbc = mysqli_connect('localhost','root','6581526','mms_t')
+    or die('数据修改失败');
 
   $query = "UPDATE userInfo SET Username = '$Username', Sex = '$Sex', 
   Phonenumber='$Phonenumber', Userlevel = '$Userlevel' WHERE  Username = '$Username'";
 
-  $result = mysqli_query($dbc,$query) or die('数据插入失败，请重新插入2');
+  $res = mysqli_query($dbc,$query) ;
 
-  mysqli_close($dbc);
-
-
-  echo '<h2>感谢您参与.数据修改成功</h2>';
+   if($res){
+       $mes = '修改成功';
+   }else{
+       $mes = '修改失败';
+   }
+    alertMes($mes,$url);
+    mysqli_close($dbc);
   
 ?>
 
