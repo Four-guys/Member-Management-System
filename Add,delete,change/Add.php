@@ -17,7 +17,7 @@
     or die('数据插入失败，请重新插入1');
 
 
-  $query = "INSERT into userInfo  Values ('{$Username}','{$Sex}','{$Phonenumber}','{Userlevel}'";
+  $query = "INSERT INTO userinfo ( Username,Sex,Phonenumber,Userlevel ) Values ('$Username','$Sex','$Phonenumber','Userlevel')";
     
 
   $result = mysqli_query($dbc,$query) or die('数据插入失败，请重新插入2');
