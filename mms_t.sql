@@ -49,7 +49,7 @@ insert into reward_info(require_point,reward_name)values(40,"book4");
 
 select * from reward_info;
 
-select requre_point from reward_info where id = 1;
+select require_point from reward_info where id = 1;
 
 select u.id,u.Username,u.Integration,r.reward_name from userInfo as u,reward_info as r where u.reward_id = r.id;
 
