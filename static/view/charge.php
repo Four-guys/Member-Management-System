@@ -14,19 +14,28 @@
         <form action="recharge.php" method="post">
             <div class="userCreditBox">
                 <br/>
-                <div class="form-group">
-                    <label class="col-sm-2 control-label">用户</label>
-                    <div class="col-sm-8 test">
+                <!-- <div class="form-group">
+                        <label class="col-sm-2 control-label" style="vertical-align:middle">用户</label>
+                    <div class="col-sm-9 test">
                         <input type="text" name="username" class="form-control" placeholder="用户名">
                     </div>
-                    <label class="col-sm-2 control-label">充值</label>
-                    <div class="col-sm-8 test">
+                        <label class="col-sm-2 control-label">充值</label>
+                    <div class="col-sm-9 test">
                         <input type="text" name="balance" class="form-control" placeholder="充值金额">
                     </div>
-                    <div class="col-sm-2">
+                    <div class="col-sm-12">
                         <input type="submit">
                     </div>
+                </div> -->
+                <div class="input-group input-group-lg">
+                    <span class="input-group-addon" id="basic-addon1">用户</span>
+                    <input type="text" name="username" class="form-control" placeholder="用户名" aria-describedby="basic-addon1">
                 </div>
+                <div class="input-group input-group-lg">
+                    <span class="input-group-addon" id="basic-addon1">充值</span>
+                    <input type="text" name="balance" class="form-control" placeholder="充值金额" aria-describedby="basic-addon1">
+                </div>
+                <button class="btn btn-lg btn-primary btn-block" type="submit" style="margin-top:30px"> 确 认 充 值</button>
             </div>
         </form>
 	</div>
