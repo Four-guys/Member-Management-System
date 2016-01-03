@@ -29,22 +29,33 @@
                 </div> -->
                 <div class="input-group input-group-lg">
                     <span class="input-group-addon" id="basic-addon1">用户</span>
-                    <input type="text" name="username" class="form-control" placeholder="用户名" aria-describedby="basic-addon1">
+                    <input type="text" id="username" name="username" class="form-control" placeholder="用户名" aria-describedby="basic-addon1">
                 </div>
                 <div class="input-group input-group-lg">
                     <span class="input-group-addon" id="basic-addon1">充值</span>
-                    <input type="text" name="balance" class="form-control" placeholder="充值金额" aria-describedby="basic-addon1">
+                    <input type="text" id="balance" name="balance" class="form-control" placeholder="充值金额" aria-describedby="basic-addon1">
                 </div>
-                <button class="btn btn-lg btn-primary btn-block" type="submit" style="margin-top:30px"> 确 认 充 值</button>
+                <button class="btn btn-lg btn-primary btn-block" type="submit" style="margin-top:30px" onclick="return check()"> 确 认 充 值</button>
             </div>
         </form>
 	</div>
-
-<!-- necessary for jQuery -->
-<script type="text/javascript" src="../bower_components/jquery/dist/jquery.js"></script>
-
-<!-- necessary for Bootstrap's javascript plugins -->
-<script type="text/javascript" src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    function check(){
+        var user = document.getElementById("username").value;
+        var balance = document.getElementById("balance").value;
+        if(user == ""){
+            alert("请填写用户名");
+            return false;
+        }
+        else if(balance == "") {
+            alert("请填写充值金额");
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+</script>
 </body>
 </html>
 <?php include("templates/_footer.html"); ?>

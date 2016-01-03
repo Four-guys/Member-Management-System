@@ -125,7 +125,7 @@ if($username == null){
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">返回</button>
-                        <button type="submit" class="btn btn-primary">保存</button>
+                        <button type="submit" onclick="return check()" class="btn btn-primary">保存</button>
                         <button type="submit" class="btn btn-primary btn-delete">删除</button>
                     </div>
                 </form>
@@ -160,6 +160,16 @@ if($username == null){
                 $('#myModal').find('.select').attr('action','delete.php');
             });
         });
+        function check(){
+            var name = document.getElementById("Username").value;
+            if(name == ""){
+                alert("请输入用户名");
+                return false;
+            }
+            else{
+                return true;
+            }
+        }
     </script>
 <?php
 }

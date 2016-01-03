@@ -62,12 +62,12 @@
             <div class="modal-body modalBuyBody">
                 <div class="name"></div>
                 <div class="price"></div>
-                用户：<input type="text" name="username" />
+                用户：<input type="text" name="username" id="Username" />
                 <input type="hidden" name="reward" class="reward" />
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                <input type="submit" class="btn btn-primary">
+                <input type="submit" onclick="return check()" class="btn btn-primary">
             </div>
         </form>
     </div>
@@ -88,6 +88,16 @@
 		$('#myModal').find('.price').text("所需积分：" + price);
         $('.reward').attr("value",name);
 	});
+    function check() {
+        var name = document.getElementById("Username").value;
+        if (name == "") {
+            alert("请输入用户名");
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
 </script>
 </body>
 </html>
