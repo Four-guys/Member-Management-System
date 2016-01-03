@@ -27,7 +27,7 @@ if($username == null){
             <label>密码</label>
             <input type="password" class="form-control" name="password">
             <br>
-            <input type="submit" align="center">
+            <input type="submit" align="center" class="btn btn-lg btn-primary btn-block">
         </div>
     </form>
 </div>
