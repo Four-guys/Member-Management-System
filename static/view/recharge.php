@@ -30,11 +30,11 @@ if($res && mysql_num_rows($res)>0){
     }
     else{
         $mes = '充值失败';
-        $url = 'recharge.html';
+        $url = 'charge.php';
     }
 }else{
     $mes = '用户不存在';
-    $url = 'recharge.html';
+    $url = 'charge.php';
 }
 mysql_close($link);
 alertMes($mes,$url);
