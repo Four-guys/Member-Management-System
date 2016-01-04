@@ -47,11 +47,12 @@
             alert("请填写用户名");
             return false;
         }
-        else if(balance == "") {
+        else if((balance == "") || (parseFloat(balance) < 0) {
             alert("请填写充值金额");
             return false;
         }
         else{
+            alert(parseFloat(balance) == -1);
             return true;
         }
     }

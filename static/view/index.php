@@ -162,12 +162,33 @@ if($username == null){
         });
         function check(){
             var name = document.getElementById("Username").value;
+            var sex = document.getElementById("Sex").value;
+            var tel = document.getElementById("Phonenumber").value;
+            var level = document.getElementById("Userlevel").value;
             if(name == ""){
                 alert("请输入用户名");
                 return false;
             }
+            else if(sex == ""){
+                alert("请输入性别");
+                return false;
+            }
+            else if(tel == ""){
+                alert("请输入电话号码");
+                return false;
+            }
+            else if(level == ""){
+                alert("请输入用户等级");
+                return false;
+            }
             else{
-                return true;
+                if((sex == 'boy') || (sex == 'girl') || (sex == 'secert') ){
+                    return true;
+                }
+                else{
+                    alert("请输入正确的性别");
+                    return false;
+                }
             }
         }
     </script>

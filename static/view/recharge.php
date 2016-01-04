@@ -12,6 +12,11 @@ require_once 'commonfunc.php';
 $username = $_POST['username'];
 $balance = (float)$_POST['balance'];
 $url = 'index.php';
+if($balance<0){
+    $url = 'charge.php';
+    $mes = '充值金额不正确';
+    alertMes($mes,$url);
+}
 //数据库连接
 //数据库连接模块
 include("sqlconnect.php");
