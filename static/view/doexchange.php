@@ -28,7 +28,7 @@ if($res && mysql_num_rows($res)>0){
         $requires = $row['require_point'];
         if($points<$requires){
             $mes = '积分不足';
-            $url = 'exchange.html';
+            $url = 'exchange.php';
         }else{
             //减去积分
             $points = $points - $requires;
